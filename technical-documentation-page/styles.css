@@ -1,0 +1,165 @@
+/* Link Font */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgba(35,39,47,255);
+  font-family: 'Ubuntu', sans-serif;
+  color: rgba(230,230,230,255);
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen and (min-width: 700px) {
+
+  #navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    border-right: solid;
+    border-color: rgba(0, 22, 22, 0.4);
+  }
+  #main-doc {
+    position: absolute;
+    left: 310px;
+    padding: 20px;
+    margin-bottom: 110px;
+  }
+
+  #navbar header {
+    padding: 2px;
+    margin: 10px;
+  }
+  #navbar a {
+    font-size: 1.55rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #main-doc {
+    padding: 20px;
+  }
+}
+
+#navbar {
+  margin-bottom: 1rem;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: grey transparent;
+  height: 100vh;
+}
+
+#navbar header {
+  text-align: center;
+  font-size: 1.8rem;
+  margin: 20px 0;
+}
+
+#navbar header .fa-brands {
+  font-size: 2.6rem;
+  color: #2965f1;
+}
+
+#navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+#navbar a {
+  display: block;
+  text-align: center;
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: rgba(230,230,230,255);
+  width: 100%;
+  padding: 12px 0;
+  margin-right: 4px;
+  border-color: transparent;
+  border-radius: 5px;
+}
+
+#navbar a:hover {
+  background-color: rgba(40, 53, 65, 255);
+}
+
+#navbar a:active{
+  color: rgba(24,130,164,255);
+}
+
+#main-doc .header2 {
+  font-size: 1.8rem;
+}
+
+#main-doc header {
+  font-size: 1.5rem;
+}
+
+#main-doc a {
+  color: #5B94FB;
+}
+
+article {
+  margin: 13px;
+}
+
+section li {
+  margin: 15px 0;
+  line-height: 1.2;
+}
+
+p {
+  font-weight: 400;  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.narrow {
+  color: rgba(230,230,230,255);
+  background-color: #1b1b1b;
+  padding: 2px;
+  border-radius: 0.25rem;
+}
+
+a .narrow {
+  color: #8cb4ff;
+  text-decoration: none;
+}
+
+.wide {
+  display: block;
+  background-color: rgba(22,24,29,255); padding: 20px 10px;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+table, td, th {
+  border: 1px solid;
+}
+
+td, th {
+  padding: 6px;
+}
+
+td {
+  font-size: 0.94rem;
+  line-height: 1.5;
+}
+
+table {
+  max-width: 100%;
+  border-collapse: collapse;
+}

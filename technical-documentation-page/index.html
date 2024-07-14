@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <!-- This the navigation bar link -->
+    <nav id="navbar">
+      <header><i class="fa-brands fa-css3-alt"></i> CSS Documentation</header>
+      <ul>
+        <li>
+          <a class="nav-link" href="#Introduction">Introduction</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#What_is_CSS?">What is CSS?</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Anatomy_of_a_CSS_ruleset">Anatomy of a CSS ruleset</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Selecting_multiple_elements">Selecting multiple elements</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Different_types_of_selectors">Different types of selectors</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Fonts_and_text">Fonts and text</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#CSS:_all_about_boxes">CSS: all about boxes</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Changing_the_page_color">Changing the page color</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Styling_the_body">Styling the body</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Positioning_and_styling_the_main_page_title">Positioning and styling the main page title</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Centering_the_image">Centering the image</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Conclusion">Conclusion</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Reference">Reference</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- This is the main documentation -->
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header class="header2">Introduction</header>
+        <article>
+          <p>Cascading Style Sheets (CSS) is a <a href="https://developer.mozilla.org/en-US/docs/Web/API/StyleSheet">stylesheet</a> language used to describe the presentation of a document written in <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a> or <a href="https://developer.mozilla.org/en-US/docs/Web/XML/XML_introduction">XML</a> (including XML dialects such as <a href="https://developer.mozilla.org/en-US/docs/Web/SVG">SVG</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/SVG">MathML</a>, or <a href="https://developer.mozilla.org/en-US/docs/Web/XHTML"></a>XHTML. CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.</p>
+        </article>
+      </section>
+
+      <section class="main-section" id="What_is_CSS?">
+        <header class="header2">What is CSS?</header>
+        <article>
+            <p>Like HTML, CSS is not a programming language. It's not a markup language either.
+    <b>CSS is a style sheet language</b>. CSS is what you use to selectively style HTML elements. For example, this CSS selects paragraph text, setting the color to red:</p>
+            <code class="wide code">
+              p {
+        color: red;
+    }
+    
+            </code>
+            <p>To make the code work, we still need to apply this CSS (above) to your HTML document. Otherwise, the styling won't change the appearance of the HTML. (If you haven't been following our project, pause here to read <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files">Dealing with files</a> and <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics">HTML basics</a>.)</p>
+            <ol>
+              <li>Open your <code class="narrow code">index.html</code> file. Paste the following line in the head (between the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head"><code class="narrow code">&lt;head&gt;</code></a>  and <code class="narrow code">&lt;/head&gt;</code> tags):</li>
+               <code class="wide code">&lt;link href="styles/style.css" rel="stylesheet" /&gt;</code>
+              <li>Save index.html and load it in your browser. You should see something like this: <img alt="A live browser with title Mozilla is cool" src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/website-screenshot-styled.png"></li>
+            </ol>
+        </article>
+      </section>
+
+      <section class="main-section" id="Anatomy_of_a_CSS_ruleset">
+        <header>Anatomy of a CSS ruleset</header>
+        <article>
+            <p>Let's dissect the CSS code for red paragraph text to understand how it works:</p>
+            <img alt="CSS declaration" src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/css-declaration-small.png">
+            <p>The whole structure is called a <b>ruleset</b>. (The term <i>ruleset</i> is often referred to as just rule.) Note the names of the individual parts <b>Selector</b>, <b>Declaration</b>, <b>Properties</b>, <b>Property value</b>.
+    </p>
+          </section>
+          <section class="main-section" id="Selecting_multiple_elements">
+            <header>Selecting multiple elements</header>
+            <p>You can also select multiple elements and apply a single ruleset to all of them.
+    Separate multiple selectors by commas. For example:</p>
+            <code class="wide code">
+              p,
+              li,
+              h1 {
+                color: red;
+              }
+            </code>
+        </article> 
+      </section>
+      <section class="main-section" id="Different_types_of_selectors">
+        <header>Different types of selectors</header>
+        <article>
+            <p>There are many different types of selectors. The example above use <b>element selectors</b>, which select all elements of a given type. But we can make more specific selections as well. Here are some of the more common types of selectors:</p>
+            <table>
+              <tr>
+                <th>Selector name</th>
+                <th>What does it select</th>
+                <th>Example</th>
+              </tr>
+              <tr>
+                <td>ID selector</td>
+                <td>The element on the page with the specified ID. on a given HTML page, each id value should be unique.</td>
+                <td><code class="narrow code">#my-id</code> selects <code class="narrow code">&lt;p id="my-id"&gt;</code> or <code class="narrow code">&lt;a id="my-id"&gt;</code></td>
+              </tr>
+              <tr>
+                <td>Class selector</td>
+                <td>The element(s) on the page with the specified class. Multiple instances of the same class can appear on a page.</td>
+                <td><code class="narrow code">.my-class</code> selects <code class="narrow code">&lt;p class="my-class"&gt;</code> and <code class="narrow code">&lt;a class="my-class"&gt;</code></td>
+              </tr>
+              <tr>
+                <td>Attribute selector</td>
+                <td>The element(s) on the page with the specified attribute.</td>
+                <td><code class="narrow code">img[src]</code>  
+    selects <code>&lt;img src="myimage.png"&gt;</code> but not <code  class="narrow code">&lt;img&gt;</code></td>
+              </tr>
+              <tr>
+                <td>Pseudo-class selector</td>
+                <td>The specified element(s), but only when in the specified state. (For example, when a cursor hovers over a link.)</td>
+                <td><code class="narrow code">a:hover</code>  
+    selects <code class="narrow code">&lt;a&gt;</code>, but only when the mouse pointer is hovering over the link.</td>
+              </tr>
+            </table>
+            <p>There are many more selectors to discover. To learn more, see the MDN <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors">Selectors guide</a>.</p>
+
+        </article>
+      </section>
+      <section class="main-section" id="Fonts_and_text">
+        <header class="header2">Fonts and text</header>
+        <article>
+          <p>Now that we've explored some CSS fundamentals, let's improve the appearance of the example by adding more rules and information to the <code class="narrow code">style.css</code> file.</p>
+          <ol>
+            <li> Firs, find the <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#font">output from Google Fonts</a> that you previously saved from <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like">What will your website look like?</a>. Add the <code class="narrow code">&lt;link&gt;</code> element somewhere inside your <code class="narrow code">index.html</code>'s head (anywhere between the <code class="narrow code">&lt;head&gt;</code> and <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head"><code class="narrow code">&lt;/head&gt;</code></a> tags). It looks something like this:</li>
+            <li>
+              Next, delete the existing rule you have in your <code class="narrow code">style.css</code> file. It was a good test, but let's not continue with lots of red text.
+            </li>
+            <li>
+              Add the following lines (Shown below), replacing the <code class="narrow code">font-family</code> assignment with your <code class="narrow code">font-family</code> selection from <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#font">What will your website look like?</a>. The property <code class="narrow code">font-family</code> refers to the font(s) you want to use for text. This rule defines a global base font and font size for the whole page. Since <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html"><code class="narrow code">&lt;html&gt;</code></a> is the parent element of the whole page, all elements inside it inherit the same <code class="narrow code">font-size</code> and <code class="narrow code">font-family</code>. <code class="wide code">
+                html {
+                  font-size: 10px; /* px means "pixels": the base font size is now 10 pixels high */
+                  font-family: "Open Sans", sans-serif; /* this should be the rest fo the output you got from Google Fonts */
+                }
+              </code>
+            </li>
+            <li>Now let's set font sizes for elements that will have text inside the HTML body ( <code class="narrow code">&lt;h1&gt;</code>, <code class="narrow code">&lt;li&gt;</code>, and <code>&lt;p&gt;</code>). We'll also center the heading. Finally, let's expand the second ruleset (below) with settings for line height and letter spacing to make body content more readable.
+            <code class="wide code">
+              h1 {
+                font-size: 60px;
+                text-align: center;
+              }
+              
+              p,
+              li {
+                font-size: 16px;
+                line-height: 2;
+                letter-spacing: 1px;
+              }
+              </code>
+              </li>
+          </ol>
+          <p>Adjust the <code class="narrow code">px</code> values as you like. Your work-in-progress should look similar to this:</p>
+          <img alt="Live browser with title Mozilla is cool" src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/website-screenshot-font-small.png">
+        </article>
+      </section>
+      <section class="main-section" id="CSS:_all_about_boxes">
+        <header class="header2">CSS: all about boxes</header>
+        <article>
+          <p>Something you'll notice about writing CSS: a lot of it is about boxes. This includes setting size, color, and position. Most HTML elements on your page can be thought of as boxes sitting on top of other boxes.</p>
+          <img alt="A boxes" src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/boxes.jpg">
+          <p>CSS layout is mostly based on the box model. Each box taking up space on your page has properties like: </p>
+          <ol>
+            <li><code class="narrow code">padding</code>, the space around the content. In the example below, it is the space around the paragrap text.</li>
+            <li><code class="narrow code">border</code>, the solid line that is just outside the padding.</li>
+            <li><code class="narrow code">margin</code>, the space around the outside of the border.</li>
+          </ol>
+          <img alt="Illustration of margin, border, and padding" src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/box-model.png">
+          <p>In this section we also use:</p>
+          <ol>
+            <li><code class="narrow code">width</code> (of an element).</li>
+            <li><code class="narrow code">background-color</code>, the color behind an element's content and padding.</li>
+            <li><code class="narrow code">color</code>, the color of an element's content (usually text).</li>
+            <li><code class="narrow code">text-shadow</code> sets a drop shadow on the text inside an element.</li>
+            <li><code class="narrow code">display</code> sets the display mode of an element. (keep reading to learn more)</li>
+          </ol>
+          <p>To continue, let's add more CSS. Keep adding these new rules at the bottom of `style.css`. Experiment with changing values to see what happens.</p>
+        </article>
+      </section>
+      <section class="main-section" id="Changing_the_page_color">
+        <header>Changing the page color</header>
+        <article>
+          <code class="wide code">
+            html {
+              background-color: #00539f;
+            }
+          </code>
+        </article>
+      </section>
+      <section class="main-section" id="Styling_the_body">
+        <header>Styling the body</header>
+        <code class="wide code">
+          body {
+            widht: 600px;
+            margin: 0 auto;
+            background-color: #ff9500;
+            padding: 0 20px 20px 20px;
+            border: 5px solid black;
+          }
+        </code>
+        <p>There are several declarations for the <code class="narrow code">&lt;body&gt;</code> element. Let's go through these line-by-line:</p>
+        <ul>
+          <li><code class="narrow code">width: 600px;</code> This forces the body to always be 600 pixels wide.</li>
+          <li><code class="narrow code">margin: 0 auto;</code> When you set two values on a property like <code class="short code">margin</code> or <code class="narrow code">padding</code>, the first value affects the element's top _and_ bottom side (setting it to <code class="narrow code">0</code> in this case); the second value affects the left _and_ right side. (Here, `auto` is a special value that divides the available horizontal space evenly between left and right). You can also use one, two, three, or four values, as documented in <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin#syntax">Margin Syntax</a>.</li>
+          <li><code class="narrow code">background-color: #FF9500;</code> This sets the element's background color. This project uses a reddish orange for the body background color, as opposed to dark blue for the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html"><code class="narrow code">&lt;html&gt;</code></a> element. (Feel free to experiment.)</li>
+          <li><code class="narrow code">padding: 0 20px 20px 20px;</code> This sets four values for padding. The goal is to put some space around the content. In this example, there is no padding on the top of the body, and 20 pixels on the right, bottom and left. The values set top, right, bottom, left, in that order. As with <code class="narrow code">margin</code>, you can use one, two, three, or four values, as documented in <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/padding#syntax">Padding Syntax</a>.</li>
+          <li><code class="narrow code">border: 5px solid black;</code> This sets values for the width, style and color of the border. In this case, it's a five-pixel–wide, solid black border, on all sides of the body.</li>
+        </ul>
+      </section>
+      <section class="main-section" id="Positioning_and_styling_the_main_page_title">
+        <header>Positioning and styling the main page title</header>
+        <article>
+          <code class="wide code">
+            h1 {
+              margin: 0;
+              padding: 20px 0;
+              color: #00539f;
+              text-shadow: 3ps 3px 1px black;
+            }
+          </code>
+          <p>You may have noticed there's a horrible gap at the of the body. That happens because browsers apply default styling to the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements">h1</a> element (among others). That might seem like a bad idea, but the intent is to provide basic readability for un-styled pages. To eliminate the gap, we overwrite the browser's default styling with the setting <code class="narrow code">margin: 0;</code>.</p>
+          <p>Next, we set the heading's top and bottom padding to 20 pixels.</p>
+          <p>Following that, we set the heading text to be the same color as the HTML background color.</p>
+          <p>Finally, <code class="narrow code">text-shadow</code> applies a shadow to the text content of the element. Its four values are:</p>
+          <ul>
+            <li>The first pixel value sets the <b>horizontal offset</b> of the shadow form the text: how far it moves across.</li>
+            <li>The second pixel value sets the <b>vertical offset</b> of the shadow from the text: how far it moves down.</li>
+            <li>The third pixel value sets the <b>blur radius</b> of the shadow. A larger value produces a more fuzzy-looking shadow.</li>
+            <li>The fourth value sets the base color of the shadow.</li>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="Centering_the_image">
+        <header>Centering the image</header>
+        <article>
+          <code class="wide code">
+            img {
+              display: block;
+              margin: 0 auto;
+            }
+          </code>
+          <p>Next we center the image to make it look better. We could use the <code class="narrow code">margin: 0 auto</code> trick again as we did for the body. But there are differences that require an additional setting to make the CSS work.</p>
+          <p>The <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body"><code class="narrow code">&lt;body&gt;</code></a> is a block element, meaning it takes up space on the page. The margin applied to a block element will be respected by other elements on the page. In contrast, images are <b>inline</b> elements, for the auto margin trick to work on this image, we must give it block-level behavior using <code class="narrow code">display: block;</code>.
+</p>
+        </article>
+      </section>
+      <section class="main-section" id="Conclusion">
+        <header class="header">Conclusion</header>
+        <article>
+          <p>If you followed all the instructions in this article, you should have a page that looks similar to this one: </p>
+          <img alt="Live browser with title Mozilla is cool" src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/website-screenshot-final.png">
+          <p>In this exercise, we have just scratched the surface of CSS. To go further, see <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS">Learning to style HTML using CSS</a>.</p>
+        </article>
+      </section>
+      <section class="main-section" id="Reference">
+        <header>Reference</header>
+          <li>All the documentation in this page is taken from <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide">MDN</a></li>
+      </section>
+    </main>
+  </body>
+</html>
