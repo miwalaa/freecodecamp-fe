@@ -13,6 +13,7 @@
 <h2>🛠️ Installation Steps:</h2>
 
 <p>1. Clone the repository</p>
+Open Git Bash or your terminal and run:
 
 ```
 git clone https://github.com/miwalaa/freecodecamp-responsive-web-design.git
@@ -25,6 +26,7 @@ cd freecodecamp-responsive-web-design
 ```
 
 <p>3. Open the project in your browser</p>
+If you are using VS Code, run:
 
 ```
 code .
